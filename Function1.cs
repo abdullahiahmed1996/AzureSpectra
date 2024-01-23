@@ -22,7 +22,7 @@ namespace AzureSpectra
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
 
-            string connString = Environment.GetEnvironmentVariable("connectionString") ?? "Missing";
+            string connString = Environment.GetEnvironmentVariable("local") ?? "Missing";
 
             response.WriteString(connString);
 
