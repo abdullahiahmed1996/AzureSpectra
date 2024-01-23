@@ -14,8 +14,8 @@ namespace AzureSpectra
             _logger = loggerFactory.CreateLogger<Function1>();
         }
 
-        [Function("Function1")]
-        public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequestData req)
+        [Function("F1")]
+        public HttpResponseData RunF1([HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequestData req, [FromBody] string body)
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
 
